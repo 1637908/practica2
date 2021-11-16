@@ -1,3 +1,5 @@
+//Marta Monsó - 1636465 
+//Mercè De la Torre - 1367908
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -23,7 +25,7 @@ void initMats(){
 		}
 	}
 	for( i=0; i < N; i++ ){
-		Vect1[i] = rand()%100; //Emplanem els vectors amb valors semialeatoris
+		Vect1[i] = rand()%100; //Emplenem els vectors amb valors semialeatoris
 		Vect2[i] = rand()%100;
 	}
 }
@@ -40,7 +42,7 @@ void mulMat(int Mat1[N][N], int Mat2[N][N], int tempM1M2[N][N]){
 void Saxpy(int k,int Vect1[N],int Vect2[N],int tempV1V2[N]){
 	int i;
 	for( i=0; i < N; i++ ){
-		tempV1V2[i] = k*Vect1[i]+Vect2[i]; //Aplique fórmula de Saxpy
+		tempV1V2[i] = k*Vect1[i]+Vect2[i]; //Apliquem fórmula de Saxpy
 	}
 }
 
@@ -59,7 +61,7 @@ int sumDiagonal(int tempTransM1M2[N][N]){
 	for( i=0; i < N; i++ ){
 		for( j = 0; j < N; j++ ){
 			if(i==j){ //Quan la fila i la columna tenen el mateix índex, vol dir que es troben a la diagonal
-				Vector[i] = tempTransM1M2[i][j]; //Emplanem el vector amb el valor corresponent
+				Vector[i] = tempTransM1M2[i][j]; //Emplenem el vector amb el valor corresponent
 				suma+=Vector[i]; //Sumem el valor de la diagonal a la variable suma
 			}
 		}
@@ -91,7 +93,7 @@ int PermutaF(int f1,int f2, int Mat1[N][N]){
 		for( i=0; i < N; i++ ){
 			vect[i]=Mat1[f1][i]; //Guardem la 1a fila a permutar
 			vect2[i]=Mat1[f2][i]; //Guardem la 2a fila a permutar
-			Mat1[f2][i] = vect[i]; //Intercanviem vectors
+			Mat1[f2][i] = vect[i]; //Intercanviem vectors (files)
 			Mat1[f1][i] = vect2[i];
 		}
 		return 1; //True
